@@ -10,7 +10,13 @@
   <meta property="og:title" content="Sovereign Black | Private Mobile Document Services">
   <meta property="og:description" content="Discreet service for those who cannot wait in line. Professional mobile notary and loan signing brought directly to you.">
   <meta property="og:type" content="website">
-  <meta name="theme-color" content="#0a0a0a">
+  <meta property="og:site_name" content="Sovereign Black">
+  <meta name="theme-color" content="#080808">
+  <meta name="color-scheme" content="dark">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="icon" type="image/jpeg" href="logo.jpg">
+  <link rel="apple-touch-icon" href="logo.jpg">
+  <meta property="og:image" content="logo.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -21,12 +27,17 @@
   <header class="site-header" id="header">
     <div class="container header-inner">
       <a href="#home" class="logo" aria-label="Sovereign Black Home">
-        <img src="logo.jpg" alt="Sovereign Black" class="logo-img">
+        <img src="logo.jpg" alt="" class="logo-img" width="424" height="424">
+        <span class="logo-wordmark">
+          <strong>SOVEREIGN BLACK</strong>
+          <small>PRIVATE MOBILE DOCUMENT SERVICES</small>
+        </span>
       </a>
       <nav class="nav-desktop" aria-label="Primary">
         <a href="#services">Services</a>
         <a href="#pricing">Pricing</a>
         <a href="#why">Why Us</a>
+        <a href="#process">The Experience</a>
         <a href="#service-area">Service Area</a>
         <a href="#about">About</a>
         <a href="#faq">FAQ</a>
@@ -40,6 +51,7 @@
       <a href="#services">Services</a>
       <a href="#pricing">Pricing</a>
       <a href="#why">Why Us</a>
+      <a href="#process">The Experience</a>
       <a href="#service-area">Service Area</a>
       <a href="#about">About</a>
       <a href="#faq">FAQ</a>
@@ -51,15 +63,27 @@
   <main>
     <!-- Hero -->
     <section class="hero" id="home">
+      <div class="hero-gridline"></div>
       <div class="hero-overlay"></div>
+      <div class="hero-monogram" aria-hidden="true">
+        <img src="logo.jpg" alt="">
+      </div>
+      <div class="hero-orbit" aria-hidden="true"></div>
       <div class="container hero-content">
-        <p class="hero-eyebrow">PRIVATE MOBILE DOCUMENT SERVICES</p>
-        <h1 class="hero-title">SOVEREIGN<br>BLACK</h1>
-        <p class="hero-tagline">Discreet service for those who cannot wait in line.</p>
-        <p class="hero-desc">Professional mobile notary and loan signing services brought directly to you—home, office, hotel, or other agreed location.</p>
+        <p class="hero-eyebrow"><span></span> PRIVATE MOBILE DOCUMENT SERVICES <span></span></p>
+        <h1 class="hero-title">SOVEREIGN<br><em>BLACK</em></h1>
+        <p class="hero-tagline">Your documents. Your location. Your time.</p>
+        <p class="hero-desc">Discreet mobile notarization and loan signing services delivered to your home, office, hotel, closing table, production set, or other agreed location.</p>
         <div class="hero-ctas">
-          <a href="#request" class="btn btn-primary">Request Service</a>
+          <a href="#request" class="btn btn-primary">Request Service <span>↗</span></a>
           <a href="tel:9096192491" class="btn btn-outline">Call 909.619.2491</a>
+        </div>
+        <div class="hero-proof">
+          <span>CALIFORNIA NOTARY PUBLIC</span>
+          <i></i>
+          <span>BONDED &amp; INSURED</span>
+          <i></i>
+          <span>INLAND EMPIRE + GREATER LOS ANGELES</span>
         </div>
       </div>
     </section>
@@ -69,13 +93,18 @@
       <div class="container">
         <div class="section-header">
           <p class="section-eyebrow">What We Provide</p>
-          <h2 class="section-title">Our Services</h2>
+          <h2 class="section-title">Documents, Handled Differently.</h2>
+          <p class="section-intro">Private mobile service for clients who value time, discretion, and a polished experience from first contact to final signature.</p>
         </div>
 
         <div class="services-available">
           <h3 class="services-group-title">Available Now</h3>
           <div class="services-grid">
             <article class="service-card">
+              <div class="service-card-top">
+                <span class="service-number">01</span>
+                <span class="service-status">AVAILABLE NOW</span>
+              </div>
               <div class="service-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
               </div>
@@ -84,11 +113,15 @@
               <a href="#request" class="service-link">Request Service <span>→</span></a>
             </article>
             <article class="service-card">
+              <div class="service-card-top">
+                <span class="service-number">02</span>
+                <span class="service-status">AVAILABLE NOW</span>
+              </div>
               <div class="service-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
               </div>
               <h4>Loan Signing Services</h4>
-              <p>Experienced, meticulous signing support for real estate and lending transactions. Professional handling for escrow, title, attorneys, lenders, and private clients.</p>
+              <p>Professional, meticulous signing support for real estate and lending transactions. Professional handling for escrow, title, attorneys, lenders, and private clients.</p>
               <a href="#request" class="service-link">Request Service <span>→</span></a>
             </article>
           </div>
@@ -124,7 +157,7 @@
         <div class="section-header">
           <p class="section-eyebrow">Transparent Premium Rates</p>
           <h2 class="section-title">Pricing</h2>
-          <p class="section-intro">Statutory California notarial fees are separate where applicable. Pricing reflects the level of service and attention provided.</p>
+          <p class="section-intro">Clear premium service fees, quoted before the appointment. California statutory notarial fees are separate where applicable.</p>
         </div>
 
         <div class="pricing-block">
@@ -136,6 +169,7 @@
               <p>Mobile travel to your location for standard notarial acts. Ideal for single documents or straightforward appointments. Statutory notarial fees are additional.</p>
             </div>
             <div class="price-card featured">
+              <div class="price-badge">MOST REQUESTED</div>
               <h4>Executive</h4>
               <div class="price"><span class="currency">$</span>125</div>
               <p>Priority scheduling, extended on-site time, and refined handling for multiple documents or more involved appointments. Statutory notarial fees are additional.</p>
@@ -183,6 +217,7 @@ All fees are quoted prior to service. Sovereign Black does not offer discounts o
         <div class="section-header">
           <p class="section-eyebrow">The Difference</p>
           <h2 class="section-title">Why Sovereign Black</h2>
+          <p class="section-intro">A private, mobile-first experience built around one simple idea: your time and information deserve to be handled with care.</p>
         </div>
         <div class="why-grid">
           <div class="why-item">
@@ -231,6 +266,36 @@ All fees are quoted prior to service. Sovereign Black does not offer discounts o
       </div>
     </section>
 
+    <!-- How It Works -->
+    <section class="section process" id="process">
+      <div class="container">
+        <div class="process-heading">
+          <div>
+            <p class="section-eyebrow">The Sovereign Experience</p>
+            <h2 class="section-title">Simple. Private. On Your Terms.</h2>
+          </div>
+          <p class="process-intro">From request to completion, every appointment is designed to remove friction and respect your schedule.</p>
+        </div>
+        <div class="process-grid">
+          <article class="process-step">
+            <span class="process-number">01</span>
+            <h3>Request</h3>
+            <p>Tell us what you need, where you are, and when you would like service.</p>
+          </article>
+          <article class="process-step">
+            <span class="process-number">02</span>
+            <h3>Confirm</h3>
+            <p>We review the request and confirm availability, service requirements, location, and pricing.</p>
+          </article>
+          <article class="process-step">
+            <span class="process-number">03</span>
+            <h3>We Come to You</h3>
+            <p>Arrive prepared, complete the appointment professionally, and leave the waiting room behind.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- Service Area -->
     <section class="section service-area" id="service-area">
       <div class="container">
@@ -240,8 +305,9 @@ All fees are quoted prior to service. Sovereign Black does not offer discounts o
         </div>
         <div class="area-content">
           <div class="area-text">
+            <span class="area-kicker">PRIMARY SERVICE AREA</span>
             <h3>Fontana / San Bernardino + Greater Los Angeles</h3>
-            <p>Sovereign Black comes directly to the client. Primary focus is Fontana and San Bernardino, with service extending throughout Greater Los Angeles.</p>
+            <p>Sovereign Black comes directly to the client. Our primary focus is Fontana and San Bernardino, with service extending throughout Greater Los Angeles.</p>
             <p>Whether you are at home, in the office, at a hotel, on a production set, or at another agreed location, professional document services are brought to you.</p>
             <p class="area-tagline">Discreet. Local. Reliable.</p>
             <a href="#request" class="btn btn-primary">Request Service in Your Area</a>
@@ -266,7 +332,7 @@ All fees are quoted prior to service. Sovereign Black does not offer discounts o
           <h2 class="section-title">About Sovereign Black</h2>
         </div>
         <div class="about-content">
-          <p class="about-lead">Sovereign Black is a premium mobile document service providing professional, discreet service directly at the client’s home, office, hotel, hospital, business, closing location, or other agreed-upon location.</p>
+          <p class="about-lead">Sovereign Black is a private mobile document service built for clients who expect more than a transaction — they expect discretion, precision, and respect for their time.</p>
           <p>We exist for those who value privacy, precision, and the convenience of not waiting in line. Every engagement is handled with the care expected of a private concierge-level service.</p>
           <p>Our focus is simple: deliver accurate, professional notarial and loan signing services with absolute discretion and respect for the client’s time and information.</p>
           <div class="about-traits">
@@ -363,8 +429,8 @@ All fees are quoted prior to service. Sovereign Black does not offer discounts o
       <div class="container">
         <div class="section-header">
           <p class="section-eyebrow">Ready When You Are</p>
-          <h2 class="section-title">Request Executive Service</h2>
-          <p class="section-intro">Fast. Private. Professional. Submit your request and Sovereign Black will contact you to confirm availability and details.</p>
+          <h2 class="section-title">Request Sovereign Service</h2>
+          <p class="section-intro">Fast. Private. Professional. Tell us what you need and we will contact you to confirm availability, details, and final pricing.</p>
         </div>
 
         <div class="request-layout">
@@ -431,7 +497,7 @@ All fees are quoted prior to service. Sovereign Black does not offer discounts o
                 <option value="Email">Email</option>
               </select>
             </div>
-            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">Submit Request</button>
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">Request Service <span>↗</span></button>
             <p class="form-note">This is a service request, not an instant confirmation. Sovereign Black will contact you to confirm availability and details.</p>
           </form>
 
@@ -471,12 +537,21 @@ All fees are quoted prior to service. Sovereign Black does not offer discounts o
     </section>
   </main>
 
+  <div class="mobile-action-bar" aria-label="Quick actions">
+    <a href="tel:9096192491">Call / Text</a>
+    <a href="#request">Request Service</a>
+  </div>
+
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <img src="logo.jpg" alt="Sovereign Black" class="footer-logo-img">
+          <img src="logo.jpg" alt="" class="footer-logo-img" width="424" height="424">
+          <div>
+            <strong>SOVEREIGN BLACK</strong>
+            <span>Private Mobile Document Services</span>
+          </div>
         </div>
         <div class="footer-contact">
           <p>Fontana / San Bernardino + Greater Los Angeles</p>
@@ -488,6 +563,7 @@ All fees are quoted prior to service. Sovereign Black does not offer discounts o
         <a href="#services">Services</a>
         <a href="#pricing">Pricing</a>
         <a href="#why">Why Us</a>
+        <a href="#process">The Experience</a>
         <a href="#service-area">Service Area</a>
         <a href="#about">About</a>
         <a href="#faq">FAQ</a>

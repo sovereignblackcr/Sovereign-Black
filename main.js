@@ -1,34 +1,26 @@
 (function () {
   "use strict";
 
-  // Year in footer
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Header scroll state
   const header = document.getElementById("header");
   function updateHeader() {
-    if (window.scrollY > 40) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
+    if (!header) return;
+    header.classList.toggle("scrolled", window.scrollY > 28);
   }
   window.addEventListener("scroll", updateHeader, { passive: true });
   updateHeader();
 
-  // Mobile nav toggle
+  // Mobile navigation
   const navToggle = document.getElementById("navToggle");
   const navMobile = document.getElementById("navMobile");
-
   if (navToggle && navMobile) {
     navToggle.addEventListener("click", function () {
       const isOpen = navMobile.classList.toggle("open");
-      navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      navToggle.setAttribute("aria-expanded", String(isOpen));
       navToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
     });
-
-    // Close mobile nav on link click
     navMobile.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
         navMobile.classList.remove("open");
@@ -38,7 +30,6 @@
     });
   }
 
-  // Smooth close of mobile menu on resize to desktop
   window.addEventListener("resize", function () {
     if (window.innerWidth > 980 && navMobile) {
       navMobile.classList.remove("open");
@@ -49,7 +40,27 @@
     }
   });
 
-  // Form handling
+  // Prevent selecting unavailable services.
+  const serviceSelect = document.getElementById("service");
+  if (serviceSelect) {
+    serviceSelect.addEventListener("change", function () {
+      if (this.value.includes("Coming Soon")) {
+        this.value = "";
+        alert("This service is not yet available. Please select Mobile Notary or Loan Signing.");
+      }
+    });
+  }
+
+  // Set the minimum requested date to today.
+  const dateField = document.getElementById("preferredDate");
+  if (dateField) {
+    const now = new Date();
+    const localToday = new Date(now.getTime() - now.getTimezoneOffset() * 60000)
+      .toISOString().slice(0, 10);
+    dateField.min = localToday;
+  }
+
+  // Request form. Formspree can be activated later by replacing YOUR_FORM_ID.
   const form = document.getElementById("requestForm");
   const formSuccess = document.getElementById("formSuccess");
   const submitBtn = document.getElementById("submitBtn");
@@ -59,30 +70,28 @@
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      // Basic validation
-      const required = form.querySelectorAll("[required]");
       let valid = true;
-      required.forEach(function (field) {
-        if (!field.value.trim()) {
-          valid = false;
-          field.style.borderColor = "#b87333";
-        } else {
-          field.style.borderColor = "";
-        }
+      form.querySelectorAll("[required]").forEach(function (field) {
+        const empty = !String(field.value || "").trim();
+        field.setAttribute("aria-invalid", empty ? "true" : "false");
+        field.style.borderColor = empty ? "#a66b45" : "";
+        if (empty) valid = false;
       });
 
       const service = form.querySelector("#service");
-      if (service && (service.value.includes("Coming Soon") || !service.value)) {
+      if (service && (!service.value || service.value.includes("Coming Soon"))) {
         valid = false;
-        service.style.borderColor = "#b87333";
+        service.style.borderColor = "#a66b45";
+        service.setAttribute("aria-invalid", "true");
       }
 
       if (!valid) {
-        alert("Please complete all required fields and select an available service.");
+        const firstInvalid = form.querySelector('[aria-invalid="true"]');
+        if (firstInvalid) firstInvalid.focus();
+        alert("Please complete the required fields and select an available service.");
         return;
       }
 
-      // Build payload
       const data = {
         fullName: form.fullName.value.trim(),
         phone: form.phone.value.trim(),
@@ -95,26 +104,30 @@
         documents: form.documents.value.trim() || "N/A",
         description: form.description.value.trim() || "N/A",
         contactMethod: form.contactMethod.value,
-        submittedAt: new Date().toISOString()
+        submittedAt: new Date().toLocaleString()
       };
 
-      // Disable button
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.textContent = "Sending…";
+        submitBtn.innerHTML = "Preparing Request…";
       }
 
-      // Primary method: Formspree (user must replace FORM_ID)
-      // Fallback: open mailto with prefilled body so the request is never lost
-      const formspreeEndpoint = "https://formspree.io/f/YOUR_FORM_ID"; // ← replace after signup
+      const formspreeEndpoint = "https://formspree.io/f/YOUR_FORM_ID";
 
-      // Try Formspree first if configured; otherwise fall back to mailto
-      if (formspreeEndpoint.includes("YOUR_FORM_ID")) {
-        // Mailto fallback – works immediately without any third-party account
-        const subject = encodeURIComponent("Sovereign Black Service Request – " + data.service);
+      function showSuccess() {
+        form.hidden = true;
+        if (formSuccess) formSuccess.hidden = false;
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Request Service <span>↗</span>';
+        }
+      }
+
+      function openMailto() {
+        const subject = encodeURIComponent("Sovereign Black Service Request — " + data.service);
         const body = encodeURIComponent(
-          "New Service Request\n" +
-          "==================\n\n" +
+          "SOVEREIGN BLACK — SERVICE REQUEST\n" +
+          "================================\n\n" +
           "Name: " + data.fullName + "\n" +
           "Phone: " + data.phone + "\n" +
           "Email: " + data.email + "\n" +
@@ -129,42 +142,22 @@
           "Submitted: " + data.submittedAt
         );
         window.location.href = "mailto:sovereignblackcr@gmail.com?subject=" + subject + "&body=" + body;
+        setTimeout(showSuccess, 700);
+      }
 
-        // Show success UI after a short delay so the mailto can open
-        setTimeout(function () {
-          form.hidden = true;
-          if (formSuccess) formSuccess.hidden = false;
-          if (submitBtn) {
-            submitBtn.disabled = false;
-            submitBtn.textContent = "Submit Request";
-          }
-        }, 600);
+      if (formspreeEndpoint.includes("YOUR_FORM_ID")) {
+        openMailto();
       } else {
-        // Real Formspree submission
         fetch(formspreeEndpoint, {
           method: "POST",
           headers: { "Content-Type": "application/json", "Accept": "application/json" },
           body: JSON.stringify(data)
         })
           .then(function (res) {
-            if (!res.ok) throw new Error("Network response was not ok");
-            form.hidden = true;
-            if (formSuccess) formSuccess.hidden = false;
+            if (!res.ok) throw new Error("Submission failed");
+            showSuccess();
           })
-          .catch(function () {
-            // Ultimate fallback to mailto
-            const subject = encodeURIComponent("Sovereign Black Service Request – " + data.service);
-            const body = encodeURIComponent(JSON.stringify(data, null, 2));
-            window.location.href = "mailto:sovereignblackcr@gmail.com?subject=" + subject + "&body=" + body;
-            form.hidden = true;
-            if (formSuccess) formSuccess.hidden = false;
-          })
-          .finally(function () {
-            if (submitBtn) {
-              submitBtn.disabled = false;
-              submitBtn.textContent = "Submit Request";
-            }
-          });
+          .catch(openMailto);
       }
     });
   }
@@ -174,21 +167,10 @@
       form.reset();
       form.hidden = false;
       formSuccess.hidden = true;
-      // Clear any error borders
       form.querySelectorAll("input, select, textarea").forEach(function (el) {
         el.style.borderColor = "";
+        el.removeAttribute("aria-invalid");
       });
-    });
-  }
-
-  // Prevent booking of coming-soon services even if somehow selected
-  const serviceSelect = document.getElementById("service");
-  if (serviceSelect) {
-    serviceSelect.addEventListener("change", function () {
-      if (this.value.includes("Coming Soon")) {
-        this.value = "";
-        alert("This service is not yet available. Please select Mobile Notary or Loan Signing.");
-      }
     });
   }
 })();
