@@ -269,7 +269,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
 .hero-title {
   font-family: var(--font-serif);
-  font-size: clamp(3rem, 7.5vw, 4.8rem);
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
   font-weight: 500;
   line-height: 0.95;
   letter-spacing: 0.03em;
@@ -342,28 +342,49 @@ button, input, select, textarea { font: inherit; color: inherit; }
 }
 
 @media (max-width: 980px) {
+  .hero {
+    min-height: auto;
+    padding: calc(var(--header-h) + 1.5rem) 0 3rem;
+  }
   .hero-layout {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2rem;
   }
   .hero-visual {
     order: -1;
-    max-width: 520px;
+    max-width: 100%;
     margin: 0 auto;
   }
   .hero-content {
     max-width: 100%;
     text-align: center;
   }
+  .hero-title {
+    font-size: clamp(2.1rem, 9vw, 3.2rem);
+  }
+  .hero-tagline {
+    font-size: clamp(0.95rem, 3.5vw, 1.2rem);
+  }
   .hero-desc {
     margin-left: auto;
     margin-right: auto;
+    font-size: 0.95rem;
   }
   .hero-ctas {
     justify-content: center;
   }
   .hero-proof {
     justify-content: center;
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .container {
+    padding: 0 1.1rem;
   }
 }
 
@@ -1259,42 +1280,7 @@ body::before {
   margin-bottom:1.6rem;
 }
 .hero-eyebrow span { width:32px; height:1px; background:var(--copper); display:block; }
-.hero-title {
-  font-size: clamp(4.1rem, 10vw, 7.2rem);
-  line-height:.82;
-  letter-spacing:.015em;
-  font-weight:500;
-  color:var(--off-white);
-  text-shadow: 0 18px 60px rgba(0,0,0,.5);
-  margin-bottom:1.8rem;
-}
-.hero-title em {
-  color:var(--copper-light);
-  font-style:normal;
-  background: linear-gradient(115deg, #f0e5d7 5%, #b98963 48%, #d7b28e 92%);
-  -webkit-background-clip:text;
-  background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-.hero-tagline {
-  font-size:clamp(1.35rem,2.4vw,1.75rem);
-  font-style:normal;
-  letter-spacing:.015em;
-  color:var(--off-white);
-  margin-bottom:1rem;
-}
-.hero-desc { max-width: 590px; font-size:.98rem; color:#aaa39a; line-height:1.85; margin-bottom:2rem; }
-.hero-ctas { gap:.75rem; }
-.hero-proof {
-  display:flex;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:.75rem 1rem;
-  margin-top:2.35rem;
-  color:#766f67;
-  font-size:.52rem;
-  letter-spacing:.16em;
-}
+/* Old oversized hero rules intentionally neutralized — see earlier polished hero styles */
 .hero-proof i { width:3px; height:3px; background:var(--copper); border-radius:50%; opacity:.8; }
 .hero-monogram {
   position:absolute;
@@ -1482,7 +1468,7 @@ body::before {
   .hero-content { max-width:none; }
   .hero-eyebrow { font-size:.52rem; letter-spacing:.19em; }
   .hero-eyebrow span { width:20px; }
-  .hero-title { font-size:clamp(3.6rem,18vw,5.2rem); }
+  .hero-title { font-size:clamp(2.1rem, 9vw, 3rem); }
   .hero-tagline { font-size:1.35rem; line-height:1.25; max-width:330px; }
   .hero-desc { font-size:.9rem; line-height:1.75; }
   .hero-ctas { flex-direction:column; }
