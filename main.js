@@ -124,9 +124,9 @@
       }
 
       function openMailto() {
-        const subject = encodeURIComponent("Sovereign Black Service Request — " + data.service);
+        const subject = encodeURIComponent("Rison Concierge Service Request — " + data.service);
         const body = encodeURIComponent(
-          "SOVEREIGN BLACK — SERVICE REQUEST\n" +
+          "RISON CONCIERGE — SERVICE REQUEST\n" +
           "================================\n\n" +
           "Name: " + data.fullName + "\n" +
           "Phone: " + data.phone + "\n" +
