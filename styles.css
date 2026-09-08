@@ -364,6 +364,10 @@ button, input, select, textarea { font: inherit; color: inherit; }
   }
   .hero-tagline {
     font-size: clamp(0.95rem, 3.5vw, 1.2rem);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
   }
   .hero-desc {
     margin-left: auto;
@@ -1469,7 +1473,7 @@ body::before {
   .hero-eyebrow { font-size:.52rem; letter-spacing:.19em; }
   .hero-eyebrow span { width:20px; }
   .hero-title { font-size:clamp(2.1rem, 9vw, 3rem); }
-  .hero-tagline { font-size:1.35rem; line-height:1.25; max-width:330px; }
+  .hero-tagline { font-size:1.15rem; line-height:1.35; max-width:100%; margin-left:auto; margin-right:auto; text-align:center; }
   .hero-desc { font-size:.9rem; line-height:1.75; }
   .hero-ctas { flex-direction:column; }
   .hero-ctas .btn { width:100%; }
