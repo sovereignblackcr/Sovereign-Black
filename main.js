@@ -100,8 +100,8 @@
         preferredDate: form.preferredDate.value || "Not specified",
         preferredTime: form.preferredTime.value.trim() || "Not specified",
         location: form.location.value.trim(),
-        signers: form.signers.value || "N/A",
-        documents: form.documents.value.trim() || "N/A",
+        signers: form.signers.value.trim(),
+        documents: form.documents.value.trim(),
         description: form.description.value.trim() || "N/A",
         contactMethod: form.contactMethod.value,
         submittedAt: new Date().toLocaleString()
