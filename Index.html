@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><style>
+@font-face {
+  font-family: "Optimistic";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Optimistic Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
+}
+:where(html) {
+  font-family: "Optimistic", system-ui, sans-serif;
+}
+:where(code, pre, kbd, samp) {
+  font-family: "Optimistic Mono", ui-monospace, monospace;
+}
+</style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rison Concierge | Private Mobile Notary in Fontana, CA</title>
+<meta name="description" content="Rison Concierge offers private mobile notary and loan signing services delivered to your home, office, hospital, or preferred location in Fontana, CA and surrounding areas." />
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  body { font-family: 'Inter', sans-serif; background: #000; color: #e5e5e5; }
+  .serif { font-family: 'Cormorant Garamond', serif; }
+  .brand { font-family: 'Cinzel', serif; letter-spacing: 0.12em; font-weight: 500; }
+  .copper-text {
+    background: linear-gradient(135deg, #d4a574 0%, #B87333 40%, #8c5a2b 70%, #d4a574 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .logo-fluid {
+    width: clamp(84px, 12vw, 132px);
+    height: auto;
+    max-height: 132px;
+    object-fit: contain;
+  }
+  .card {
+    background: #0A0A0A;
+    border: 1px solid #1f1f1f;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .card:hover { border-color: #B87333; transform: translateY(-2px); }
+  .btn-copper {
+    background: #B87333;
+    color: #000;
+    transition: background 0.3s;
+  }
+  .btn-copper:hover { background: #d4a574; }
+  .divider { height: 1px; background: #1f1f1f; }
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="bg-neutral-200 text-neutral-800 text-xs md:text-sm">
+  <div class="max-w-6xl mx-auto px-4 py-2 flex justify-between items-center">
+    <a href="tel:+19096192491" class="hover:underline">(909) 619-2491</a>
+    <a href="mailto:risonconcierge@gmail.com" class="hover:underline">risonconcierge@gmail.com</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="bg-black border-b border-neutral-900">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div>
+      <div class="text-[10px] tracking-[0.3em] text-neutral-500 uppercase mb-1">Est. 2026</div>
+      <h1 class="brand copper-text text-2xl md:text-3xl">RISON CONCIERGE</h1>
+    </div>
+    <img src="logo.png" alt="Rison Concierge logo" class="logo-fluid" />
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="relative">
+  <img src="hero.jpg" alt="" class="w-full h-[420px] md:h-[520px] object-cover opacity-60" />
+  <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+  <div class="absolute inset-0 flex items-center">
+    <div class="max-w-6xl mx-auto px-4 w-full">
+      <p class="text-xs tracking-[0.3em] uppercase text-[#B87333] mb-4">Privacy. Precision. Presence.</p>
+      <h2 class="serif text-4xl md:text-6xl text-white font-light leading-tight mb-4">Professional notarization.<br/>Delivered to you.</h2>
+      <p class="text-neutral-300 max-w-xl mb-8 font-light">Private mobile notary and loan signing services brought directly to your home, office, hospital, business, or preferred location.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="tel:+19096192491" class="btn-copper px-8 py-3 text-sm font-semibold tracking-wide">BOOK APPOINTMENT</a>
+        <a href="#pricing" class="border border-neutral-600 text-white px-8 py-3 text-sm tracking-wide hover:border-[#B87333]">VIEW SERVICES</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mobile Notary Services -->
+<section id="pricing" class="bg-black py-16 md:py-24">
+  <div class="max-w-6xl mx-auto px-4">
+    <p class="text-xs tracking-[0.3em] uppercase text-[#B87333] mb-3">Mobile Notary Services</p>
+    <h2 class="serif text-3xl md:text-4xl text-white font-light mb-4">Professional notarization. Delivered to you.</h2>
+    <p class="text-neutral-400 max-w-2xl mb-12 font-light">Whether you need a single document notarized or a more involved signing appointment, we bring professional mobile service directly to you.</p>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Essential -->
+      <div class="card p-8 rounded-sm">
+        <h3 class="text-xs tracking-[0.25em] uppercase text-neutral-400 mb-2">Essential</h3>
+        <div class="serif text-4xl text-white mb-4">$75</div>
+        <p class="text-neutral-300 text-sm mb-6">For straightforward appointments requiring one notarial service.</p>
+        <div class="divider mb-6"></div>
+        <ul class="text-sm text-neutral-400 space-y-2 font-light">
+          <li>Mobile service to your location</li>
+          <li>Up to 1 notarial act</li>
+          <li>Identity verification</li>
+          <li>Required journal entry</li>
+          <li>Discreet professional service</li>
+        </ul>
+        <a href="tel:+19096192491" class="btn-copper block text-center mt-8 py-3 text-sm font-semibold">CHOOSE ESSENTIAL</a>
+      </div>
+
+      <!-- Executive -->
+      <div class="card p-8 rounded-sm relative" style="border-color:#B87333;">
+        <div class="absolute top-4 right-4 text-[10px] tracking-[0.2em] uppercase text-[#B87333] border border-[#B87333] px-2 py-1">Most Popular</div>
+        <h3 class="text-xs tracking-[0.25em] uppercase text-neutral-400 mb-2">Executive</h3>
+        <div class="serif text-4xl text-white mb-4">$115</div>
+        <p class="text-neutral-300 text-sm mb-6">Ideal for appointments requiring up to 3 notarizations or multiple documents.</p>
+        <div class="divider mb-6"></div>
+        <ul class="text-sm text-neutral-400 space-y-2 font-light">
+          <li>Everything in Essential</li>
+          <li>Up to 3 notarial acts</li>
+          <li>Additional time for multi-document appointments</li>
+          <li>Assistance with the signing process</li>
+          <li>Coordination of multiple documents</li>
+        </ul>
+        <a href="tel:+19096192491" class="btn-copper block text-center mt-8 py-3 text-sm font-semibold">CHOOSE EXECUTIVE</a>
+      </div>
+
+      <!-- Concierge -->
+      <div class="card p-8 rounded-sm">
+        <h3 class="text-xs tracking-[0.25em] uppercase text-neutral-400 mb-2">Concierge</h3>
+        <div class="serif text-4xl text-white mb-4">$150</div>
+        <p class="text-neutral-300 text-sm mb-6">Designed for more extensive appointments requiring up to 5 notarizations, multiple documents, or additional time and attention.</p>
+        <div class="divider mb-6"></div>
+        <ul class="text-sm text-neutral-400 space-y-2 font-light">
+          <li>Everything in Executive</li>
+          <li>Up to 5 notarial acts</li>
+          <li>Extended appointment time</li>
+          <li>Enhanced signing coordination</li>
+          <li>Priority scheduling when available</li>
+          <li>White-glove discreet service</li>
+        </ul>
+        <a href="tel:+19096192491" class="btn-copper block text-center mt-8 py-3 text-sm font-semibold">CHOOSE CONCIERGE</a>
+      </div>
+    </div>
+
+    <div class="mt-10 bg-[#0F0F0F] border border-neutral-900 p-6 md:p-8 rounded-sm">
+      <h4 class="text-sm tracking-widest uppercase text-white mb-4">Additional Service Options</h4>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-sm text-neutral-400 font-light">
+        <div>Additional acts<br/><span class="text-white">+$15 each</span></div>
+        <div>After-hours<br/><span class="text-white">+$25</span></div>
+        <div>Weekend<br/><span class="text-white">+$35</span></div>
+        <div>Rush / same-day<br/><span class="text-white">+$50</span></div>
+        <div>Extended distance<br/><span class="text-white">Custom quote</span></div>
+      </div>
+      <p class="text-xs text-neutral-500 mt-6">Statutory notarial fees: Additional, as applicable. Statutory fees apply where required by California law and are separate from the mobile service fee.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Loan Signing Services -->
+<section class="bg-[#0A0A0A] py-16 md:py-24 border-t border-neutral-900">
+  <div class="max-w-6xl mx-auto px-4">
+    <p class="text-xs tracking-[0.3em] uppercase text-[#B87333] mb-3">Loan Signing Services</p>
+    <h2 class="serif text-3xl md:text-4xl text-white font-light mb-4">Precise execution for signing packages.</h2>
+    <p class="text-neutral-400 max-w-2xl mb-12 font-light">Professional handling of loan document signings at your preferred location, with clear communication from confirmation through completion.</p>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="card p-8 rounded-sm">
+        <h3 class="text-xs tracking-[0.25em] uppercase text-neutral-400 mb-2">Standard</h3>
+        <div class="serif text-4xl text-white mb-4">$175</div>
+        <p class="text-neutral-300 text-sm mb-6">Standard loan signing packages with straightforward signing requirements.</p>
+        <div class="divider mb-6"></div>
+        <ul class="text-sm text-neutral-400 space-y-2 font-light">
+          <li>Mobile service to your location</li>
+          <li>Professional document execution support</li>
+          <li>Signing coordination</li>
+        </ul>
+        <a href="tel:+19096192491" class="btn-copper block text-center mt-8 py-3 text-sm font-semibold">REQUEST STANDARD</a>
+      </div>
+
+      <div class="card p-8 rounded-sm">
+        <h3 class="text-xs tracking-[0.25em] uppercase text-neutral-400 mb-2">Complex</h3>
+        <div class="serif text-4xl text-white mb-4">$225</div>
+        <p class="text-neutral-300 text-sm mb-6">Larger or more involved packages requiring additional time and attention.</p>
+        <div class="divider mb-6"></div>
+        <ul class="text-sm text-neutral-400 space-y-2 font-light">
+          <li>Extended appointment time</li>
+          <li>Multi-document package coordination</li>
+          <li>Appointment preparation support</li>
+        </ul>
+        <a href="tel:+19096192491" class="btn-copper block text-center mt-8 py-3 text-sm font-semibold">REQUEST COMPLEX</a>
+      </div>
+
+      <div class="card p-8 rounded-sm">
+        <h3 class="text-xs tracking-[0.25em] uppercase text-neutral-400 mb-2">Specialty</h3>
+        <div class="serif text-4xl text-white mb-4">$250+</div>
+        <p class="text-neutral-300 text-sm mb-6">Specialized, unusually complex, or time-sensitive signing assignments.</p>
+        <div class="divider mb-6"></div>
+        <ul class="text-sm text-neutral-400 space-y-2 font-light">
+          <li>Priority handling when available</li>
+          <li>Enhanced privacy and flexibility</li>
+          <li>Custom coordination</li>
+        </ul>
+        <a href="tel:+19096192491" class="btn-copper block text-center mt-8 py-3 text-sm font-semibold">REQUEST SPECIALTY</a>
+      </div>
+    </div>
+
+    <div class="mt-10 text-center max-w-2xl mx-auto">
+      <p class="text-neutral-300 text-sm font-light leading-relaxed">Rather than asking you to determine which service level you need, we will review your appointment details and confirm the appropriate service, availability, and final pricing.</p>
+      <a href="mailto:risonconcierge@gmail.com" class="inline-block mt-6 border border-[#B87333] text-[#B87333] px-8 py-3 text-sm tracking-wide hover:bg-[#B87333] hover:text-black transition">SEND APPOINTMENT DETAILS</a>
+    </div>
+  </div>
+</section>
+
+<!-- Private Mobile section -->
+<section class="relative">
+  <img src="luxury-night.jpg" alt="" class="w-full h-[380px] object-cover opacity-40" />
+  <div class="absolute inset-0 bg-black/60"></div>
+  <div class="absolute inset-0 flex items-center">
+    <div class="max-w-6xl mx-auto px-4 text-center w-full">
+      <h2 class="serif text-3xl md:text-4xl text-white font-light mb-4">Private. Discreet. <span class="copper-text">Precise.</span></h2>
+      <p class="text-neutral-300 max-w-xl mx-auto font-light mb-8">Rison Concierge is not simply a notary who travels to you. It is a professional, private mobile document experience designed around your time.</p>
+      <a href="tel:+19096192491" class="btn-copper px-10 py-3 text-sm font-semibold tracking-wide">CALL (909) 619-2491</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black border-t border-neutral-900 py-12">
+  <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+    <img src="logo.png" alt="Rison Concierge logo" style="width:120px;height:auto;object-fit:contain;" />
+    <div class="text-center md:text-right">
+      <div class="brand copper-text text-xl">RISON CONCIERGE</div>
+      <div class="text-sm text-neutral-400 mt-2"><a href="tel:+19096192491" class="hover:underline">(909) 619-2491</a> | <a href="mailto:risonconcierge@gmail.com" class="hover:underline">risonconcierge@gmail.com</a></div>
+      <div class="text-xs text-neutral-600 mt-2">Serving Fontana, CA and surrounding areas | © 2026 Rison Concierge</div>
+    </div>
+  </div>
+</footer>
+
+<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script></body>
+</html>
